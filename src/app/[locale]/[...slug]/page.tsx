@@ -16,7 +16,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vvultimatum.sbs";
 type Messages = typeof en;
 
 function languageAlternates(pathname: string) {
-  return Object.fromEntries(routing.locales.map((locale) => [locale, locale === "en" ? pathname : `/${locale}${pathname}`]));
+  return Object.fromEntries(routing.locales.map((locale) => [locale, `/${locale}${pathname}`]));
 }
 
 export async function generateStaticParams() {
@@ -34,14 +34,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     const ctMessages = (messages as unknown as Record<string, Record<string, string>>)[ct];
     const title = ctMessages?.overviewTitle || `${ctTitle} — VV Ultimatum Wiki`;
     const description = ctMessages?.overviewDescription || `Browse all ${ctTitle.toLowerCase()} guides and resources for VV Ultimatum.`;
-    return { title, description, alternates: { canonical: `/${ct}`, languages: languageAlternates(`/${ct}`) }, openGraph: { title, description, url: `${siteUrl}/${ct}`, images: [`${siteUrl}/images/hero.webp`] } };
+    return { title, description, alternates: { canonical: `/${locale}/${ct}`, languages: languageAlternates(`/${ct}`) }, openGraph: { title, description, url: `${siteUrl}/${locale}/${ct}`, images: [`${siteUrl}/images/hero.webp`] } };
   }
   const [contentType, ...articleSlug] = slug;
   const item = await getContent(contentType, articleSlug, locale);
   if (!item) return { title: "Not Found" };
   const pathname = `/${contentType}/${articleSlug.join("/")}`;
+  const localizedPathname = `/${locale}${pathname}`;
   const image = item.metadata.image?.startsWith("http") ? item.metadata.image : `${siteUrl}${item.metadata.image ?? "/images/hero.webp"}`;
-  return { title: `${item.metadata.title} — VV Ultimatum Wiki`, description: item.metadata.description, alternates: { canonical: pathname, languages: languageAlternates(pathname) }, openGraph: { type: "article", title: item.metadata.title, description: item.metadata.description, url: `${siteUrl}${pathname}`, images: [image] }, twitter: { card: "summary_large_image", images: [image] } };
+  return { title: `${item.metadata.title} — VV Ultimatum Wiki`, description: item.metadata.description, alternates: { canonical: localizedPathname, languages: languageAlternates(pathname) }, openGraph: { type: "article", title: item.metadata.title, description: item.metadata.description, url: `${siteUrl}${localizedPathname}`, images: [image] }, twitter: { card: "summary_large_image", images: [image] } };
 }
 
 export default async function SlugPage({ params }: { params: Promise<{ locale: Locale; slug: string[] }> }) {

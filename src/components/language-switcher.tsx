@@ -33,18 +33,9 @@ export function LanguageSwitcher({ locale }: { locale: string }) {
 
     let newPath = pathname;
 
-    // 移除当前 locale 前缀（如果有）
-    if (locale !== routing.defaultLocale) {
-      newPath = newPath.replace(`/${locale}`, "") || "/";
-    }
-
-    // 添加新 locale 前缀（如果不是默认语言）
-    if (nextLocale !== routing.defaultLocale) {
-      newPath = `/${nextLocale}${newPath === "/" ? "" : newPath}`;
-    }
-
-    // 设置 NEXT_LOCALE cookie，防止 middleware 重定向回原语言
-    document.cookie = `NEXT_LOCALE=${nextLocale};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
+    // 所有静态导出页面都使用明确的 locale 前缀。
+    newPath = newPath.replace(new RegExp(`^/${locale}(?=/|$)`), "") || "/";
+    newPath = `/${nextLocale}${newPath === "/" ? "" : newPath}`;
 
     router.push(newPath);
   };
