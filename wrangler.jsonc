@@ -1,13 +1,14 @@
 {
   "name": "vvultimatum-sbs",
   "compatibility_date": "2024-09-01",
+  "workers_dev": false,
   "assets": {
     "directory": "./out"
   },
   "routes": [
     {
-      "pattern": "vvultimatum.sbs/*",
-      "zone_name": "vvultimatum.sbs"
+      "pattern": "vvultimatum.sbs",
+      "custom_domain": true
     }
   ]
 }
