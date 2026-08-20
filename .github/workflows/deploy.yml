@@ -1,81 +1,46 @@
-name: Build and Deploy to GHCR
+name: Build and Deploy to Cloudflare Workers
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
-  build-and-push:
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 20
+          cache: npm
 
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=ref,event=branch
-            type=sha,prefix={{branch}}-
-            type=raw,value=latest,enable={{is_default_branch}}
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: |
-            NEXT_PUBLIC_SITE_URL=${{ secrets.NEXT_PUBLIC_SITE_URL }}
-            NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
-            NEXT_PUBLIC_MICROSOFT_CLARITY_ID=${{ secrets.NEXT_PUBLIC_MICROSOFT_CLARITY_ID }}
-            NEXT_PUBLIC_GOOGLE_ADSENSE_ID=${{ secrets.NEXT_PUBLIC_GOOGLE_ADSENSE_ID }}
-            NEXT_PUBLIC_AD_SOCIAL_BAR=${{ secrets.NEXT_PUBLIC_AD_SOCIAL_BAR }}
-            NEXT_PUBLIC_AD_NATIVE_BANNER=${{ secrets.NEXT_PUBLIC_AD_NATIVE_BANNER }}
-            NEXT_PUBLIC_AD_BANNER_728X90=${{ secrets.NEXT_PUBLIC_AD_BANNER_728X90 }}
-            NEXT_PUBLIC_AD_BANNER_300X250=${{ secrets.NEXT_PUBLIC_AD_BANNER_300X250 }}
-            NEXT_PUBLIC_AD_BANNER_468X60=${{ secrets.NEXT_PUBLIC_AD_BANNER_468X60 }}
-            NEXT_PUBLIC_AD_SIDEBAR_160X600=${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X600 }}
-            NEXT_PUBLIC_AD_SIDEBAR_160X300=${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X300 }}
-            NEXT_PUBLIC_AD_MOBILE_320X50=${{ secrets.NEXT_PUBLIC_AD_MOBILE_320X50 }}
+      - name: Build static export
+        run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+          NEXT_PUBLIC_SITE_URL: https://vvultimatum.sbs
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
+          NEXT_PUBLIC_MICROSOFT_CLARITY_ID: ${{ secrets.NEXT_PUBLIC_MICROSOFT_CLARITY_ID }}
+          NEXT_PUBLIC_GOOGLE_ADSENSE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ADSENSE_ID }}
+          NEXT_PUBLIC_AD_SOCIAL_BAR: ${{ secrets.NEXT_PUBLIC_AD_SOCIAL_BAR }}
+          NEXT_PUBLIC_AD_NATIVE_BANNER: ${{ secrets.NEXT_PUBLIC_AD_NATIVE_BANNER }}
+          NEXT_PUBLIC_AD_BANNER_728X90: ${{ secrets.NEXT_PUBLIC_AD_BANNER_728X90 }}
+          NEXT_PUBLIC_AD_BANNER_300X250: ${{ secrets.NEXT_PUBLIC_AD_BANNER_300X250 }}
+          NEXT_PUBLIC_AD_BANNER_468X60: ${{ secrets.NEXT_PUBLIC_AD_BANNER_468X60 }}
+          NEXT_PUBLIC_AD_SIDEBAR_160X600: ${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X600 }}
+          NEXT_PUBLIC_AD_SIDEBAR_160X300: ${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X300 }}
+          NEXT_PUBLIC_AD_MOBILE_320X50: ${{ secrets.NEXT_PUBLIC_AD_MOBILE_320X50 }}
 
-  notify:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
-      - name: Deployment status
-        run: |
-          if [ "${{ needs.build-and-push.result }}" == "success" ]; then
-            echo "✅ Image pushed to ghcr.io/${{ env.IMAGE_NAME }}:latest"
-            echo "🚀 Pull and deploy on your server with:"
-            echo "docker pull ghcr.io/${{ env.IMAGE_NAME }}:latest"
-            echo "docker run -d -p 3000:3000 ghcr.io/${{ env.IMAGE_NAME }}:latest"
-          else
-            echo "❌ Build failed"
-            exit 1
-          fi
+      - name: Deploy to Cloudflare Workers
+        run: npx wrangler@latest deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

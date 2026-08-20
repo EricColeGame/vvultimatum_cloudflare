@@ -1,0 +1,14 @@
+{
+  "name": "vvultimatum-sbs",
+  "account_id": "610b80b08aa02848902d5fbdafbc9790",
+  "compatibility_date": "2024-09-01",
+  "assets": {
+    "directory": "./out"
+  },
+  "routes": [
+    {
+      "pattern": "vvultimatum.sbs/*",
+      "zone_name": "vvultimatum.sbs"
+    }
+  ]
+}
