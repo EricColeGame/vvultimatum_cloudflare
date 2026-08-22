@@ -36,6 +36,7 @@ jobs:
           NEXT_PUBLIC_AD_SIDEBAR_160X600: ${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X600 }}
           NEXT_PUBLIC_AD_SIDEBAR_160X300: ${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X300 }}
           NEXT_PUBLIC_AD_MOBILE_320X50: ${{ secrets.NEXT_PUBLIC_AD_MOBILE_320X50 }}
+          NEXT_PUBLIC_ADSTERRA_NATIVE_HOST: ${{ secrets.NEXT_PUBLIC_ADSTERRA_NATIVE_HOST }}
 
       - name: Serve default locale at site root
         run: |
