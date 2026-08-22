@@ -1,12 +1,16 @@
 export type BannerSize = "320x50" | "468x60" | "300x250" | "728x90" | "160x600" | "160x300";
 
-const BANNER_ENV: Record<BannerSize, string> = {
-  "320x50": "NEXT_PUBLIC_AD_MOBILE_320X50",
-  "468x60": "NEXT_PUBLIC_AD_BANNER_468X60",
-  "300x250": "NEXT_PUBLIC_AD_BANNER_300X250",
-  "728x90": "NEXT_PUBLIC_AD_BANNER_728X90",
-  "160x600": "NEXT_PUBLIC_AD_SIDEBAR_160X600",
-  "160x300": "NEXT_PUBLIC_AD_SIDEBAR_160X300",
+// NOTE: keys must reference process.env.NEXT_PUBLIC_* as static literals —
+// dynamic env lookups are not inlined into the client bundle by Next.js and
+// would read as undefined during hydration, unmounting the server-rendered
+// ad slots.
+const ENV_VALUES: Record<BannerSize, string | undefined> = {
+  "320x50": process.env.NEXT_PUBLIC_AD_MOBILE_320X50,
+  "468x60": process.env.NEXT_PUBLIC_AD_BANNER_468X60,
+  "300x250": process.env.NEXT_PUBLIC_AD_BANNER_300X250,
+  "728x90": process.env.NEXT_PUBLIC_AD_BANNER_728X90,
+  "160x600": process.env.NEXT_PUBLIC_AD_SIDEBAR_160X600,
+  "160x300": process.env.NEXT_PUBLIC_AD_SIDEBAR_160X300,
 };
 
 const DIMENSIONS: Record<BannerSize, { width: number; height: number }> = {
@@ -19,7 +23,7 @@ const DIMENSIONS: Record<BannerSize, { width: number; height: number }> = {
 };
 
 export function adKey(size: BannerSize): string | null {
-  const value = process.env[BANNER_ENV[size]];
+  const value = ENV_VALUES[size];
   return value && value !== "0" ? value : null;
 }
 
