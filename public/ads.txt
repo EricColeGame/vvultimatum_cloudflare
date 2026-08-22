@@ -1,2 +1,0 @@
-# Open-source placeholder.
-# Production advertising authorization files must be configured privately.

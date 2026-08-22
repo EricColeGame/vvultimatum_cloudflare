@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TrailerButton, localizeHref } from "@/components/site";
+import { AdBanner, DismissibleStickyBanner, NativeBannerAd } from "@/components/ads";
 import type { ContentItem } from "@/lib/content";
 import en from "@/locales/en.json";
 
@@ -20,6 +21,9 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
 
   return (
     <div className="space-y-16">
+      {/* Sticky 320x50 banner — top revenue slot, dismissable (course §4.3/4.4) */}
+      <DismissibleStickyBanner />
+
       {/* Hero Section */}
       <section className="text-center">
         <div className="mx-auto mb-5 flex items-center justify-center gap-2">
@@ -32,6 +36,9 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
         <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">{home.hero.description}</p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-1.5">{home.hero.stats.map((stat) => <span key={stat} className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground">{stat}</span>)}</div>
       </section>
+
+      {/* Native banner right below the hero (course §3.5) */}
+      <NativeBannerAd />
 
       {/* 最近更新 + 新手教程 两栏布局 */}
       <section className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
@@ -74,6 +81,9 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
         </div>
       </section>
 
+      {/* Leaderboard below the two-column section (course §3.5) */}
+      <AdBanner size="728x90" />
+
       {/* Dynamic Content Section — auto-scrolling carousel */}
       {articles.length > 0 && (
         <section>
@@ -109,6 +119,9 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
           </div>
         </section>
       )}
+
+      {/* Medium rectangle between content blocks (course §3.5) */}
+      <AdBanner size="300x250" />
 
       {/* About Game (curated, stays in JSON) */}
       <section className="grid gap-8 rounded-3xl border border-border bg-card/60 p-6 lg:grid-cols-[1.1fr_0.9fr]"><div><h2 className="text-3xl font-bold tracking-tight text-foreground">{home.aboutGame.title}</h2>{home.aboutGame.paragraphs.map((p) => <p key={p} className="mt-5 leading-8 text-muted-foreground">{p}</p>)}<Button asChild className="mt-6"><Link href={localizeHref("/guide/vv-ultimatum-beginner-guide-2026", locale)}>{home.aboutGame.cta}</Link></Button></div><div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2">{home.aboutGame.stats.map((stat) => <div key={stat.label} className="rounded-2xl border border-border bg-background p-4"><p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{stat.label}</p><p className="mt-2 text-xl font-bold text-foreground">{stat.value}</p></div>)}</div></section>
@@ -227,6 +240,9 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
 
       {/* Final CTA (curated, stays in JSON) */}
       <section className="rounded-3xl border border-border bg-gradient-to-br from-muted to-card p-8 text-center"><h2 className="text-3xl font-bold tracking-tight text-foreground">{home.finalCta.title}</h2><p className="mx-auto mt-3 max-w-2xl text-muted-foreground">{home.finalCta.description}</p><div className="mt-6 flex flex-wrap justify-center gap-3"><Button asChild size="lg"><Link href={localizeHref("/guide/vv-ultimatum-beginner-guide-2026", locale)}>{home.finalCta.primary}<ArrowRight className="ml-2 h-4 w-4" /></Link></Button><Button asChild size="lg" variant="outline"><Link href="https://www.roblox.com/games/6270290407/VV-ULTIMATUM">{home.finalCta.secondary}</Link></Button></div></section>
+
+      {/* Bottom leaderboard (course §3.5) */}
+      <AdBanner size="728x90" />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import { hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -19,12 +20,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const image = `${siteUrl}/images/hero.webp`;
+  const adsenseId = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
   return {
     metadataBase: new URL(siteUrl),
     title: { default: "VV: ULTIMATUM Wiki", template: "%s" },
     description: "Complete VV: ULTIMATUM fan wiki with codes, bosses, builds, races, guides and progression walkthroughs.",
     openGraph: { type: "website", locale, url: siteUrl, siteName: "VV Ultimatum Wiki", images: [{ url: image }] },
     twitter: { card: "summary_large_image", images: [image] },
+    ...(adsenseId ? { other: { "google-adsense-account": adsenseId } } : {}),
   };
 }
 
@@ -42,9 +45,19 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     image: `${siteUrl}/images/hero.webp`,
   };
 
+  const adsenseId = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
+
   return (
     <html lang={locale} className={`${inter.variable}`} suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+        {adsenseId && (
+          <Script
+            async
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+          />
+        )}
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <NextIntlClientProvider messages={messages}>
             <JsonLd data={organization} />
