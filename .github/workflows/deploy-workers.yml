@@ -37,6 +37,9 @@ jobs:
           NEXT_PUBLIC_AD_SIDEBAR_160X300: ${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X300 }}
           NEXT_PUBLIC_AD_MOBILE_320X50: ${{ secrets.NEXT_PUBLIC_AD_MOBILE_320X50 }}
 
+      - name: Serve default locale at site root
+        run: cp -f out/en/index.html out/index.html
+
       - name: Deploy to Cloudflare Workers
         run: npx wrangler@latest deploy
         env:
