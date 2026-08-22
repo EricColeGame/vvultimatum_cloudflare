@@ -38,7 +38,10 @@ jobs:
           NEXT_PUBLIC_AD_MOBILE_320X50: ${{ secrets.NEXT_PUBLIC_AD_MOBILE_320X50 }}
 
       - name: Serve default locale at site root
-        run: cp -f out/en/index.html out/index.html
+        run: |
+          if [ -f out/en/index.html ]; then cp -f out/en/index.html out/index.html
+          elif [ -f out/en.html ]; then cp -f out/en.html out/index.html
+          else echo "en homepage export not found"; find out -maxdepth 2 -name '*.html' | head -20; exit 1; fi
 
       - name: Deploy to Cloudflare Workers
         run: npx wrangler@latest deploy
