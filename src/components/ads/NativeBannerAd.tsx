@@ -6,10 +6,10 @@
  */
 export function NativeBannerAd({ className = "" }: { className?: string }) {
   const key = process.env.NEXT_PUBLIC_AD_NATIVE_BANNER;
-  if (!key || key === "0") return null;
-  // host is per-site (pl<website-id>.<cdn-domain>); override with
-  // NEXT_PUBLIC_ADSTERRA_NATIVE_HOST when reusing this template for a new site
-  const host = process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_HOST || "pl30964251.profitableratecpmnetwork.com";
+  // host is per-site (pl<website-id>.<cdn-domain>) and MUST come from
+  // NEXT_PUBLIC_ADSTERRA_NATIVE_HOST — never hardcode a real site's host here.
+  const host = process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_HOST;
+  if (!key || key === "0" || !host) return null;
   const html = `<script async="async" data-cfasync="false" src="https://${host}/${key}/invoke.js"></script>`;
   return (
     <div className={`my-8 w-full ${className}`}>
