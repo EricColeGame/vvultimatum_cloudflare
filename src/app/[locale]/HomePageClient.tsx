@@ -20,7 +20,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
   const YOUTUBE_VIDEO_ID = "zpvGp5kOg18";
 
   return (
-    <div className="space-y-16">
+    <div className="min-w-0 space-y-16">
       {/* Sticky 320x50 banner — top revenue slot, dismissable (course §4.3/4.4) */}
       <DismissibleStickyBanner />
 
