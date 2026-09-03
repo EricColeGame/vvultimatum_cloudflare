@@ -169,7 +169,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
                             <code className="rounded-lg bg-background px-3 py-1.5 font-mono text-sm font-bold text-foreground">{h.label}</code>
                             <span className="text-sm text-muted-foreground">{h.detail}</span>
                           </div>
-                          {"badge" in h && h.badge && <Badge className="shrink-0 bg-emerald-600 text-white text-[10px]">{h.badge}</Badge>}
+                          {"badge" in h && typeof h.badge === "string" && <Badge className="shrink-0 bg-emerald-600 text-white text-[10px]">{h.badge}</Badge>}
                         </div>
                       ))}
                     </div>

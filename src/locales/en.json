@@ -1,9 +1,9 @@
 {
   "site": {
-    "name": "VV: ULTIMATUM",
-    "shortName": "VV Ultimatum",
-    "tagline": "Fan-Made Community Wiki",
-    "description": "Your complete companion for VV: ULTIMATUM on Roblox. Master all three races Shinigami, Quincy, and Hollow with in-depth guides, boss strategies, build optimization, and the latest codes.",
+    "name": "My Seafood Stand Wiki",
+    "shortName": "My Seafood Stand",
+    "tagline": "Complete Guides, Codes, Recipes & Tier Lists",
+    "description": "Your ultimate guide to My Seafood Stand on Roblox! Explore active codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
   "nav": {
@@ -17,27 +17,31 @@
     "updates": "Updates",
     "home": "Home",
     "menu": "Menu",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "guide": "Guides",
+    "seafood": "Seafood & Recipes",
+    "upgrades": "Upgrades",
+    "gamepasses": "Gamepasses",
+    "community": "Community"
   },
   "home": {
     "meta": {
-      "title": "VV: ULTIMATUM — Codes, Builds, Guides | VV Ultimatum Wiki",
-      "description": "Complete VV: ULTIMATUM wiki with active codes, boss strategies, race guides, build optimization, and progression walkthroughs for Shinigami, Quincy, and Hollow."
+      "title": "My Seafood Stand Wiki — Codes, Recipes, Upgrades & Guides",
+      "description": "Complete My Seafood Stand guide on Roblox with active working codes, all fish & recipes, best upgrades tier list, and fast cash tips."
     },
     "hero": {
       "eyebrow": "Fan-Made Community Wiki",
-      "title": "VV: ULTIMATUM",
-      "description": "Your complete companion for VV: ULTIMATUM on Roblox. Master all three races Shinigami, Quincy, and Hollow with in-depth guides, boss strategies, build optimization, and the latest codes.",
+      "title": "My Seafood Stand",
+      "description": "Master your restaurant in My Seafood Stand on Roblox. Access all active codes, complete fish & recipe catalog, optimal upgrades, and pro money-making strategies.",
       "stats": [
-        "Launched Jun 5",
-        "Updated Jun 11",
-        "3 Races",
-        "Lv100 Cap",
-        "130+ Skills"
+        "All Codes",
+        "All Fish & Recipes",
+        "Upgrade Guides",
+        "Fast Cash Tips"
       ],
-      "primaryCta": "Start Beginner Guide",
-      "secondaryCta": "Compare Races",
-      "tertiaryCta": "Check Active Codes",
+      "primaryCta": "Beginner Guide",
+      "secondaryCta": "Seafood Tier List",
+      "tertiaryCta": "Active Codes",
       "videoLabel": "Official media"
     },
     "updates": {
@@ -47,7 +51,7 @@
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your VV Ultimatum Journey",
+      "title": "Your My Seafood Stand Journey",
       "cards": [
         {
           "number": "1",
@@ -67,7 +71,7 @@
         {
           "number": "4",
           "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in VV Ultimatum."
+          "description": "Learn the best methods and locations for extracting resources in My Seafood Stand."
         }
       ]
     },
@@ -138,9 +142,9 @@
       ]
     },
     "aboutGame": {
-      "title": "What is VV: ULTIMATUM?",
+      "title": "What is My Seafood Stand?",
       "paragraphs": [
-        "VV: ULTIMATUM is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
+        "My Seafood Stand is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
         "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
       ],
       "stats": [
@@ -176,227 +180,136 @@
       "cta": "Explore All Guides"
     },
     "explore": {
-      "title": "VV Ultimatum Homepage Modules Navigation",
-      "description": "Jump straight to the eight homepage sections and scroll to the module you need.",
+      "title": "Explore My Seafood Stand Wiki",
+      "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
       "modules": [
         {
           "order": 1,
-          "name": "VV Ultimatum Codes",
-          "description": "Redeem the current VV Ultimatum code before spending rerolls so you can test faction ideas with more room to pivot.",
-          "href": "/codes",
-          "displayType": "code-cards",
+          "name": "My Seafood Stand Working Codes",
+          "description": "Redeem the latest working codes to claim free coins, gems, exclusive cosmetics, and boost items before they expire.",
+          "href": "/codes/my-seafood-stand-codes",
+          "displayType": "code-box",
           "highlights": [
             {
-              "label": "day1",
-              "detail": "3× Clan Reroll + Token Booster + Focus Elixir",
-              "badge": "Active"
+              "label": "Code",
+              "detail": "FULLRELEASE — Free Cash & Rewards"
+            },
+            {
+              "label": "Code",
+              "detail": "75KLIKES — Exclusive Ability Reroll"
+            },
+            {
+              "label": "Tip",
+              "detail": "Codes are case-sensitive; enter them in the Settings menu"
             }
           ]
         },
         {
           "order": 2,
-          "name": "VV Ultimatum Beginner Guide",
-          "description": "Use the first hour to lock in a faction route, learn the live controls, and push quests instead of burning resources on random rerolls.",
-          "href": "/guide/vv-ultimatum-beginner-guide-2026",
-          "displayType": "step-by-step",
+          "name": "Beginner Guide: How to Start & Serve Customers",
+          "description": "Step-by-step beginner guide covering customer ordering, food prep, station management, and cashier checkout mechanics.",
+          "href": "/guide/my-seafood-stand-beginner-guide",
+          "displayType": "feature-cards",
           "highlights": [
             {
-              "label": "1",
-              "detail": "Choose a faction route before spending rerolls"
+              "label": "Step 1",
+              "detail": "Take customer order at the stall front"
             },
             {
-              "label": "2",
-              "detail": "Finish the opening path and learn the live controls"
+              "label": "Step 2",
+              "detail": "Cook seafood on the grill or boil station"
             },
             {
-              "label": "3",
-              "detail": "Redeem the launch code once the Shop unlocks"
-            },
-            {
-              "label": "4",
-              "detail": "Push story quests before side grinding"
-            },
-            {
-              "label": "5",
-              "detail": "Start mission systems as soon as they open"
-            },
-            {
-              "label": "6",
-              "detail": "Spend early points around one damage plan"
+              "label": "Step 3",
+              "detail": "Serve warm food promptly for maximum customer tips"
             }
           ]
         },
         {
           "order": 3,
-          "name": "VV Ultimatum Official Links",
-          "description": "Verified destinations worth bookmarking for the real game page, community channels, and official video feed.",
-          "href": "/codes",
-          "displayType": "card-list",
+          "name": "Seafood & Fish Tier List",
+          "description": "Complete breakdown of all catchable fish and seafood ranked by market value, customer demand, and profit margins.",
+          "href": "/seafood/my-seafood-stand-tier-list",
+          "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "🎮",
-              "detail": "VV: ULTIMATUM on Roblox"
+              "label": "S Tier",
+              "detail": "King Crab · Lobster Boil — Highest profit per customer"
             },
             {
-              "label": "💬",
-              "detail": "Official Discord Server"
+              "label": "A Tier",
+              "detail": "Salmon · Jumbo Shrimp · Tuna Steak — Reliable fast earners"
             },
             {
-              "label": "📺",
-              "detail": "Official YouTube Channel"
+              "label": "B Tier",
+              "detail": "Clams · Oysters · Squid — Great mid-game margin"
             },
             {
-              "label": "🐦",
-              "detail": "VV Ultimatum on X"
-            },
-            {
-              "label": "🎵",
-              "detail": "VV Ultimatum on TikTok"
-            },
-            {
-              "label": "👥",
-              "detail": "Roblox Community Group"
+              "label": "C Tier",
+              "detail": "Common Sardines · Small Crab — Starter seafood"
             }
           ]
         },
         {
           "order": 4,
-          "name": "VV Ultimatum Clans Tier List",
-          "description": "Treat Clan Rerolls as route-shaping resources. The best keeps depend on faction identity.",
-          "href": "/tier-list",
-          "displayType": "tier-grid",
+          "name": "Best Upgrades Progression",
+          "description": "Optimal order to spend your cash: expand kitchen stations, hire waitstaff, speed up grills, and upgrade seating.",
+          "href": "/upgrades/my-seafood-stand-best-upgrades",
+          "displayType": "feature-cards",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Kurosaki · Shihoin · Cifer — Do not reroll"
+              "label": "Priority 1",
+              "detail": "Cooking Speed & Extra Burners — Clears customer backlog"
             },
             {
-              "label": "A",
-              "detail": "Eisenhauer · Ishida · Kamamura · Aaroniero — Keep for build"
+              "label": "Priority 2",
+              "detail": "Customer Seating Capacity — Increases simultaneous diners"
             },
             {
-              "label": "B",
-              "detail": "Parnkgjas · Hitsugaya · Antenor — Good for leveling"
-            },
-            {
-              "label": "C",
-              "detail": "Schulte · Madarame · Calius — Reroll when affordable"
+              "label": "Priority 3",
+              "detail": "Auto-Chef / Waiter Staff — Passive hands-free revenue"
             }
           ]
         },
         {
           "order": 5,
-          "name": "VV Ultimatum Skill Tree Tier List",
-          "description": "Builds work best when players choose a clear combat core instead of spreading Skill Points across unrelated routes.",
-          "href": "/skills/vv-ultimatum-best-skills-ranked",
-          "displayType": "tier-grid",
+          "name": "How to Get Cash Fast",
+          "description": "Top money-making strategies, VIP evaluation, tip maximization, and high-efficiency serving tips.",
+          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
+          "displayType": "feature-cards",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Hakuda (melee combos) · Speed (mobility core)"
+              "label": "Combo",
+              "detail": "Chain orders quickly to build the Customer Happiness multiplier"
             },
             {
-              "label": "A",
-              "detail": "Quincy (bow pressure) · Strength (heavy hits) · Shinigami (Kido control)"
+              "label": "High Margin",
+              "detail": "Focus high-tier seafood boils during peak customer rush hours"
             },
             {
-              "label": "B",
-              "detail": "Hollow / Arrancar (Cero burst windows)"
-            },
-            {
-              "label": "Utility",
-              "detail": "Sense (target reading) · Misc (universal combat tools)"
+              "label": "Reinvest",
+              "detail": "Keep 20% cash reserve for fresh ingredient replenishment"
             }
           ]
         },
         {
           "order": 6,
-          "name": "VV Ultimatum Weapons Tier List",
-          "description": "Weapon choices are tied to race. Quincy get the clearest starter list, while Shinigami focus on Zanpakuto growth.",
-          "href": "/tier-list",
-          "displayType": "tier-grid",
+          "name": "Plot Expansion & Stand Customization",
+          "description": "Unlock bigger land plots, arrange optimal cooking layouts, and add high-value decorative upgrades.",
+          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
+          "displayType": "feature-cards",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Sword — Balanced all-rounder, safest Quincy starter"
+              "label": "Plot 1",
+              "detail": "Starter Beach Stand (3 Tables, 1 Grill)"
             },
             {
-              "label": "A",
-              "detail": "Spear (long reach) · Longsword (safe range)"
+              "label": "Plot 2",
+              "detail": "Boardwalk Restaurant (6 Tables, 2 Grills, Boil Station)"
             },
             {
-              "label": "B",
-              "detail": "Greatsword · Hammer · Club — Heavy or niche pressure"
-            },
-            {
-              "label": "C",
-              "detail": "Rifle · Rapier — Playable but outclassed"
-            }
-          ]
-        },
-        {
-          "order": 7,
-          "name": "VV Ultimatum Hollow Progression Guide",
-          "description": "Hollow progression rewards patience: rushing mask removal too early can leave the final build weaker than necessary.",
-          "href": "/guide/VV-Ultimatum-bleach",
-          "displayType": "step-by-step",
-          "highlights": [
-            {
-              "label": "1",
-              "detail": "Choose a Hollow Type (Gorilla, Lizard, Turtle, Centipede)"
-            },
-            {
-              "label": "2",
-              "detail": "Consume Hollows and collect matching traits"
-            },
-            {
-              "label": "3",
-              "detail": "Advance from base Hollow → Menos → Adjuchas"
-            },
-            {
-              "label": "4",
-              "detail": "Push to Vasto Lorde for the 4-trait ceiling"
-            },
-            {
-              "label": "5",
-              "detail": "Remove mask → Become Arrancar or Vastocar"
-            },
-            {
-              "label": "6",
-              "detail": "Meditate and win the Resurrection Fight"
-            }
-          ]
-        },
-        {
-          "order": 8,
-          "name": "VV Ultimatum Shinigami Progression Guide",
-          "description": "The Shinigami route is built around steady questing, Soul Pager missions, meditation timing, and the eventual Shikai fight.",
-          "href": "/races/vv-ultimatum-shinigami-guide",
-          "displayType": "step-by-step",
-          "highlights": [
-            {
-              "label": "1",
-              "detail": "Run Main Story Quests to unlock the progression loop"
-            },
-            {
-              "label": "2",
-              "detail": "Unlock Soul Society and buy the Soul Pager"
-            },
-            {
-              "label": "3",
-              "detail": "Reach Level 25 and start meditation"
-            },
-            {
-              "label": "4",
-              "detail": "Respond to Spirit Whispers for Shikai EXP"
-            },
-            {
-              "label": "5",
-              "detail": "Solve the Bells Puzzle in the Inner World"
-            },
-            {
-              "label": "6",
-              "detail": "Fight the Shikai NPC and unlock Shikai weapon"
+              "label": "Plot 3",
+              "detail": "Luxury Pier Seafood Pavilion (Full Automation & VIP Seating)"
             }
           ]
         }
@@ -404,11 +317,11 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about VV: ULTIMATUM.",
+      "description": "Quick answers to the most common questions about My Seafood Stand.",
       "items": [
         {
-          "question": "What is VV: ULTIMATUM?",
-          "answer": "VV: ULTIMATUM is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of three races Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is My Seafood Stand?",
+          "answer": "My Seafood Stand is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of game mechanics Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
         },
         {
           "question": "Which race should beginners pick?",
@@ -429,7 +342,7 @@
       ]
     },
     "finalCta": {
-      "title": "Ready to Master VV: ULTIMATUM?",
+      "title": "Ready to Master My Seafood Stand?",
       "description": "From your first steps in Fort Adams to endgame boss fights our community wiki has you covered with free, up-to-date guides.",
       "primary": "Read the Beginner Guide",
       "secondary": "Play on Roblox"
@@ -437,12 +350,12 @@
   },
   "bosses": {
     "meta": {
-      "title": "Bosses — Complete Guide & Walkthrough | VV Ultimatum Wiki",
-      "description": "Complete boss guides for VV: ULTIMATUM — all bosses from tutorial Gelum to endgame encounters with strategies, drops, and respawn timers."
+      "title": "Bosses — Complete Guide & Walkthrough | My Seafood Stand Wiki",
+      "description": "Complete boss guides for My Seafood Stand — all bosses from tutorial Gelum to endgame encounters with strategies, drops, and respawn timers."
     },
     "overviewTitle": "Bosses Overview",
-    "overviewDescription": "Complete guides for every boss encounter in VV: ULTIMATUM 13 bosses from the tutorial knight Gelum to endgame encounters like the Gelid Dweller and Gauntlet challenges.",
-    "body": "Bosses in VV: ULTIMATUM serve as skill gates and progression milestones. Some, like Gelum, teach you the combat fundamentals during the tutorial. Others, such as the Shikai Spirit and Resurreccion Spirit, are inner-world encounters tied directly to your race's power unlock. Area bosses like Dragonfly, King Croc, and Securis guard access to new zones and rewards. Recent additions include the Rogue Commander with his Minions, the ice-themed The Everfrosted, and four brand new endgame bosses: The Gelid Dweller, Cinder of the Broken Sky, Devourer of Hosts, and the Wandering Swordsman (Junichiro). Each boss has distinct attack patterns and telegraphed moves you need to learn. Use the guides below to prepare for every fight.",
+    "overviewDescription": "Complete guides for every boss encounter in My Seafood Stand 13 bosses from the tutorial knight Gelum to endgame encounters like the Gelid Dweller and Gauntlet challenges.",
+    "body": "Bosses in My Seafood Stand serve as skill gates and progression milestones. Some, like Gelum, teach you the combat fundamentals during the tutorial. Others, such as the Shikai Spirit and Resurreccion Spirit, are inner-world encounters tied directly to your race's power unlock. Area bosses like Dragonfly, King Croc, and Securis guard access to new zones and rewards. Recent additions include the Rogue Commander with his Minions, the ice-themed The Everfrosted, and four brand new endgame bosses: The Gelid Dweller, Cinder of the Broken Sky, Devourer of Hosts, and the Wandering Swordsman (Junichiro). Each boss has distinct attack patterns and telegraphed moves you need to learn. Use the guides below to prepare for every fight.",
     "guidesTitle": "Bosses Guides",
     "readMore": "Read more",
     "new": "New",
@@ -466,14 +379,14 @@
     "noGuidesAvailable": "No guides available yet. Check back soon!"
   },
   "footer": {
-    "aboutTitle": "VV Ultimatum Wiki",
-    "about": "VV Ultimatum Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.",
+    "aboutTitle": "My Seafood Stand Wiki",
+    "about": "My Seafood Stand Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.",
     "quickLinks": "Quick Links",
     "guides": "Guides",
     "legal": "Legal",
-    "copyright": "2026 VV: ULTIMATUM Wiki. Not affiliated with Midnight Continent or Roblox.",
+    "copyright": "2026 My Seafood Stand Wiki. Not affiliated with Midnight Continent or Roblox.",
     "description": "Free Bleach-inspired fighting RPG on Roblox. 3 races, 130+ skills, Lv100 cap.",
-    "playGame": "Play VV: ULTIMATUM",
+    "playGame": "Play My Seafood Stand",
     "officialDiscord": "Official Discord",
     "officialYoutube": "Official YouTube",
     "vvBuilder": "VV Builder (Skill Planner)",
