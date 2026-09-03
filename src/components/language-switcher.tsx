@@ -11,9 +11,22 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const LOCALE_LABELS: Record<Locale, string> = {
+const LOCALE_LABELS: Record<string, string> = {
   en: "English",
+  es: "Español",
+  pt: "Português",
+  de: "Deutsch",
+  fr: "Français",
   ja: "日本語",
+  zh: "简体中文",
+  ko: "한국어",
+  ru: "Русский",
+  it: "Italiano",
+  ar: "العربية",
+  th: "ไทย",
+  vi: "Tiếng Việt",
+  id: "Bahasa Indonesia",
+  tr: "Türkçe",
 };
 
 /**
@@ -45,7 +58,7 @@ export function LanguageSwitcher({ locale }: { locale: string }) {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground">
           <Globe className="h-4 w-4" />
-          <span>{LOCALE_LABELS[locale as Locale]}</span>
+          <span>{LOCALE_LABELS[locale] || locale.toUpperCase()}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="min-w-[140px]">
@@ -55,7 +68,7 @@ export function LanguageSwitcher({ locale }: { locale: string }) {
             onClick={() => handleSwitch(loc)}
             className="flex items-center justify-between gap-3"
           >
-            <span>{LOCALE_LABELS[loc]}</span>
+            <span>{LOCALE_LABELS[loc] || loc.toUpperCase()}</span>
             {loc === (locale as Locale) && <Check className="h-4 w-4 text-[hsl(var(--nav-theme))]" />}
           </DropdownMenuItem>
         ))}

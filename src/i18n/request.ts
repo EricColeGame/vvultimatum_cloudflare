@@ -1,24 +1,10 @@
 import { getRequestConfig } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { routing } from "./routing";
-
-// --- Static imports of every locale's UI messages -------------------------
-// When adding a language: add an import here AND an entry in `messagesMap`.
 import en from "@/locales/en.json";
-import ja from "@/locales/ja.json";
 
 type Messages = typeof en;
 
-const messagesMap: Record<string, Partial<Messages>> = {
-  en,
-  ja: ja as unknown as Partial<Messages>,
-};
-
-/**
- * Recursively merge `override` onto `base`. Missing keys in a non-English
- * locale automatically fall back to the English value, so a partial
- * translation never throws a missing-message error.
- */
 function deepMerge<T>(base: T, override: Partial<T>): T {
   if (
     typeof base !== "object" ||
@@ -51,9 +37,17 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ? requested
     : routing.defaultLocale;
 
-  // Non-English locales are merged on top of English so untranslated keys
-  // gracefully fall back instead of erroring.
-  const messages = deepMerge(en, messagesMap[locale] ?? {});
+  let localeMessages: Partial<Messages> = {};
+  if (locale !== "en") {
+    try {
+      const imported = await import(`@/locales/${locale}.json`);
+      localeMessages = imported.default || imported;
+    } catch {
+      // Fallback cleanly to en if locale json doesn't exist yet
+      localeMessages = {};
+    }
+  }
 
+  const messages = deepMerge(en, localeMessages);
   return { locale, messages };
 });

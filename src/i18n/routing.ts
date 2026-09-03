@@ -1,17 +1,9 @@
 import { defineRouting } from "next-intl/routing";
+import { siteConfig } from "@/config/site";
 
-/**
- * Single source of truth for supported locales.
- *
- * To add a new language you must update THREE places that have to stay in sync:
- *   1. The `locales` array below.
- *   2. The static imports + `messagesMap` in `src/i18n/request.ts`.
- *   3. The matching JSON file in `src/locales/<locale>.json`.
- */
 export const routing = defineRouting({
-  locales: ["en", "ja"],
-  defaultLocale: "en",
-  // Static export requires an explicit locale segment in every URL.
+  locales: siteConfig.locales as unknown as string[],
+  defaultLocale: siteConfig.defaultLocale,
   localePrefix: "always",
   localeDetection: false,
 });
