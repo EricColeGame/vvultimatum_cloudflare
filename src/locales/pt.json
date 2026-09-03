@@ -1,0 +1,400 @@
+{
+  "site": {
+    "name": "My Seafood Stand Wiki",
+    "shortName": "My Seafood Stand",
+    "tagline": "Guias Completos, Códigos, Receitas e Tier Lists",
+    "description": "Seu guia definitivo para My Seafood Stand no Roblox! Descubra códigos ativos, receitas de frutos do mar, melhores melhorias, estratégias de lucro e guias de progressão.",
+    "legalNotice": "Wiki não oficial feita por fãs. Criada por jogadores, para jogadores."
+  },
+  "nav": {
+    "races": "Raças",
+    "bosses": "Chefes",
+    "guides": "Guias",
+    "codes": "Códigos",
+    "tierList": "Tier List",
+    "maps": "Mapas",
+    "skills": "Habilidades",
+    "updates": "Atualizações",
+    "home": "Início",
+    "menu": "Menu",
+    "toggleTheme": "Alternar tema",
+    "guide": "Guias",
+    "seafood": "Frutos do Mar e Receitas",
+    "upgrades": "Melhorias",
+    "gamepasses": "Gamepasses",
+    "community": "Comunidade"
+  },
+  "home": {
+    "meta": {
+      "title": "My Seafood Stand Wiki — Códigos, Receitas, Melhorias e Guias",
+      "description": "Guia completo de My Seafood Stand no Roblox com códigos ativos válidos, todos os peixes e receitas, tier list das melhores melhorias e dicas para ganhar dinheiro rápido."
+    },
+    "hero": {
+      "eyebrow": "Wiki da Comunidade Criada por Fãs",
+      "title": "My Seafood Stand",
+      "description": "Domine seu restaurante em My Seafood Stand no Roblox. Acesse todos os códigos ativos, catálogo completo de peixes e receitas, melhores melhorias e estratégias profissionais para lucrar.",
+      "stats": [
+        "Todos os Códigos",
+        "Todos os Peixes e Receitas",
+        "Guias de Melhorias",
+        "Dicas de Dinheiro Rápido"
+      ],
+      "primaryCta": "Guia para Iniciantes",
+      "secondaryCta": "Tier List de Frutos do Mar",
+      "tertiaryCta": "Códigos Ativos",
+      "videoLabel": "Mídia oficial"
+    },
+    "updates": {
+      "title": "Últimas Atualizações",
+      "browse": "Navegar por Todos os Guias",
+      "viewAll": "Ver Tudo"
+    },
+    "start": {
+      "eyebrow": "Comece Aqui",
+      "title": "Sua Jornada em My Seafood Stand",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Guia para Iniciantes",
+          "description": "Domine o Mundo Espiritual desde o primeiro dia com nosso guia completo para iniciantes, cobrindo controles, combate e progressão inicial."
+        },
+        {
+          "number": "2",
+          "title": "Subir de Nível Mais Rápido",
+          "description": "Domine o início do jogo e alcance o nível máximo rapidamente com as rotas e estratégias de nivelamento mais eficientes."
+        },
+        {
+          "number": "3",
+          "title": "Melhores Locais de Farm",
+          "description": "Maximize seus ganhos de Soul Essence e EXP com locais de farm ideais para cada estágio."
+        },
+        {
+          "number": "4",
+          "title": "Como Extrair",
+          "description": "Aprenda os melhores métodos e locais para extrair recursos em My Seafood Stand."
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "Páginas Populares",
+      "title": "Em Alta",
+      "quickLinks": [
+        "Progressão de Hollow",
+        "Subir de Nível Mais Rápido",
+        "Amuletos Espirituais",
+        "Todos os Guias de Chefes"
+      ],
+      "cards": [
+        {
+          "badge": "Iniciante",
+          "title": "Guia para Iniciantes",
+          "description": "Tudo o que você precisa, desde o seu primeiro login até dominar o básico de combate e progressão.",
+          "href": "/beginner-guide"
+        },
+        {
+          "badge": "Atualizado",
+          "title": "Códigos Ativos",
+          "description": "Todos os códigos válidos com recompensas — resgate antes que expirem.",
+          "href": "/codes"
+        },
+        {
+          "badge": "Atualizado",
+          "title": "Banco de Dados de Equipamentos",
+          "description": "94 itens em 5 espaços — banco de dados completo de equipamentos com atributos, raridade e fontes.",
+          "href": "/equipment"
+        },
+        {
+          "badge": "Popular",
+          "title": "Qual Raça Você Deve Escolher?",
+          "description": "Shinigami, Quincy ou Hollow — compare as três e encontre seu estilo de jogo perfeito.",
+          "href": "/races/best-race"
+        },
+        {
+          "badge": "Novo",
+          "title": "Inimigos e Monstros",
+          "description": "23 tipos de inimigos em 5 regiões — drops, localizações e dicas de farm.",
+          "href": "/enemies"
+        },
+        {
+          "badge": "Popular",
+          "title": "Localizações de Chefes e Drops",
+          "description": "Todas as localizações de chefes, tabelas de drops e tempos de respawn em uma única referência.",
+          "href": "/boss-locations-drops-respawn-times"
+        },
+        {
+          "badge": "Popular",
+          "title": "Melhores Builds",
+          "description": "Distribuição ideal de atributos, escolhas na árvore de habilidades e combinações de Amuletos para cada estilo de jogo.",
+          "href": "/builds/best-builds"
+        },
+        {
+          "badge": "Novo",
+          "title": "Tier List de Shikai",
+          "description": "Todos os 6 tipos de Shikai de Shinigami ranqueados por desempenho em PvP e PvE.",
+          "href": "/tier-list/shikai"
+        },
+        {
+          "badge": "Novo",
+          "title": "Guia de Eventos Mundiais",
+          "description": "Supply Caches, Raids e eventos mundiais de endgame com recompensas raras.",
+          "href": "/world-events"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "O que é My Seafood Stand?",
+      "paragraphs": [
+        "My Seafood Stand é um RPG de luta estilizado no Roblox inspirado no universo do anime Bleach. Escolha entre três raças jogáveis — Shinigami, Quincy ou Hollow —, cada uma com sistemas de progressão exclusivos, habilidades desbloqueáveis e caminhos de evolução. Domine mais de 130 habilidades enquanto luta até atingir o nível máximo de 100.",
+        "Seja desbloqueando sua primeira Shikai, evoluindo de um Hollow básico para um Arrancar ou concluindo missões de Tenente Quincy, nossa wiki cobre todos os sistemas com guias detalhados, tabelas de dados e tutoriais passo a passo."
+      ],
+      "stats": [
+        {
+          "label": "Desenvolvedor",
+          "value": "Midnight Continent"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Roblox"
+        },
+        {
+          "label": "Gênero",
+          "value": "RPG de Luta"
+        },
+        {
+          "label": "Visitas",
+          "value": "12,6M+"
+        },
+        {
+          "label": "Favoritos",
+          "value": "243 mil+"
+        },
+        {
+          "label": "Total de Habilidades",
+          "value": "130+"
+        },
+        {
+          "label": "Nível Máximo",
+          "value": "100"
+        }
+      ],
+      "cta": "Explorar Todos os Guias"
+    },
+    "explore": {
+      "title": "Explorar a Wiki de My Seafood Stand",
+      "description": "Domine seu restaurante de frutos do mar no Roblox com guias essenciais de progressão, códigos ativos, catálogo completo de peixes e receitas e estratégias ideais de melhorias.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Códigos Válidos de My Seafood Stand",
+          "description": "Resgate os códigos ativos mais recentes para garantir moedas grátis, gemas, cosméticos exclusivos e itens de boost antes que expirem.",
+          "href": "/codes/my-seafood-stand-codes",
+          "displayType": "code-box",
+          "highlights": [
+            {
+              "label": "Código",
+              "detail": "FULLRELEASE — Dinheiro e Recompensas Grátis"
+            },
+            {
+              "label": "Código",
+              "detail": "75KLIKES — Reroll de Habilidade Exclusivo"
+            },
+            {
+              "label": "Dica",
+              "detail": "Os códigos diferenciam maiúsculas de minúsculas; insira-os no menu de Configurações"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Guia para Iniciantes: Como Começar e Atender Clientes",
+          "description": "Guia passo a passo para iniciantes cobrindo pedidos de clientes, preparo de alimentos, gerenciamento de estações e mecânicas de caixa registradora.",
+          "href": "/guide/my-seafood-stand-beginner-guide",
+          "displayType": "feature-cards",
+          "highlights": [
+            {
+              "label": "Passo 1",
+              "detail": "Anote o pedido do cliente na frente da barraca"
+            },
+            {
+              "label": "Passo 2",
+              "detail": "Cozinhe os frutos do mar na grelha ou na estação de cozimento"
+            },
+            {
+              "label": "Passo 3",
+              "detail": "Sirva a comida quente rapidamente para obter o máximo de gorjetas"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Tier List de Peixes e Frutos do Mar",
+          "description": "Detalhamento completo de todos os peixes e frutos do mar capturáveis, ranqueados por valor de mercado, demanda dos clientes e margens de lucro.",
+          "href": "/seafood/my-seafood-stand-tier-list",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "Tier S",
+              "detail": "Caranguejo Real · Cozido de Lagosta — Maior lucro por cliente"
+            },
+            {
+              "label": "Tier A",
+              "detail": "Salmão · Camarão Jumbo · Filé de Atum — Ganhos rápidos e consistentes"
+            },
+            {
+              "label": "Tier B",
+              "detail": "Amêijoas · Ostras · Lula — Ótima margem no meio do jogo"
+            },
+            {
+              "label": "Tier C",
+              "detail": "Sardinhas Comuns · Caranguejo Pequeno — Frutos do mar iniciais"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Progressão das Melhores Melhorias",
+          "description": "Ordem ideal para gastar seu dinheiro: expanda estações de cozinha, contrate garçons, acelere as grelhas e melhore os assentos.",
+          "href": "/upgrades/my-seafood-stand-best-upgrades",
+          "displayType": "feature-cards",
+          "highlights": [
+            {
+              "label": "Prioridade 1",
+              "detail": "Velocidade de Cozimento e Queimadores Extras — Elimina a fila de espera dos clientes"
+            },
+            {
+              "label": "Prioridade 2",
+              "detail": "Capacidade de Assentos para Clientes — Aumenta o número de clientes simultâneos"
+            },
+            {
+              "label": "Prioridade 3",
+              "detail": "Chef Automático / Garçons — Renda passiva automatizada"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Como Ganhar Dinheiro Rápido",
+          "description": "Principais estratégias para lucrar, avaliação VIP, maximização de gorjetas e dicas de atendimento de alta eficiência.",
+          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
+          "displayType": "feature-cards",
+          "highlights": [
+            {
+              "label": "Combo",
+              "detail": "Complete pedidos rapidamente em sequência para aumentar o multiplicador de Felicidade do Cliente"
+            },
+            {
+              "label": "Alta Margem",
+              "detail": "Foque em pratos de frutos do mar de nível alto durante os horários de pico"
+            },
+            {
+              "label": "Reinvestir",
+              "detail": "Mantenha uma reserva de 20% em dinheiro para reposição de ingredientes frescos"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Expansão de Terreno e Personalização da Barraca",
+          "description": "Desbloqueie terrenos maiores, organize layouts de cozinha ideais e adicione decorações de alto valor.",
+          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
+          "displayType": "feature-cards",
+          "highlights": [
+            {
+              "label": "Terreno 1",
+              "detail": "Barraca de Praia Inicial (3 Mesas, 1 Grelha)"
+            },
+            {
+              "label": "Terreno 2",
+              "detail": "Restaurante no Calçadão (6 Mesas, 2 Grelhas, Estação de Cozimento)"
+            },
+            {
+              "label": "Terreno 3",
+              "detail": "Pavilhão de Frutos do Mar no Píer de Luxo (Automação Total e Assentos VIP)"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "description": "Respostas rápidas para as dúvidas mais comuns sobre My Seafood Stand.",
+      "items": [
+        {
+          "question": "O que é My Seafood Stand?",
+          "answer": "My Seafood Stand é um RPG de luta gratuito no Roblox baseado no anime Bleach. Você escolhe uma das mecânicas de jogo: Shinigami (Ceifador de Almas), Quincy ou Hollow, cada uma com sistemas únicos de progressão, habilidades de combate e evolução. O jogo conta com mais de 130 habilidades, nível máximo 100, lutas contra chefes e profunda personalização de builds."
+        },
+        {
+          "question": "Qual raça os iniciantes devem escolher?",
+          "answer": "Shinigami é a raça inicial mais direta e simples, enquanto Hollow e Quincy oferecem rotas de progressão mais especializadas. Compare suas habilidades antes de fazer sua escolha."
+        },
+        {
+          "question": "Qual é o nível máximo atual?",
+          "answer": "O nível máximo atual é 100, com mais de 130 habilidades disponíveis entre árvores de habilidades e sistemas de progressão de raças."
+        },
+        {
+          "question": "Onde encontro códigos ativos?",
+          "answer": "Acesse a página de Códigos para ver códigos válidos, recompensas, notas de expiração e instruções de resgate."
+        },
+        {
+          "question": "Os guias de chefes estão atualizados?",
+          "answer": "As páginas de chefes são organizadas com notas de spawn, padrões de ataque, estratégias, tabelas de drops e próximos passos de progressão."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Pronto para Dominar My Seafood Stand?",
+      "description": "Dos seus primeiros passos em Fort Adams até as lutas contra chefes no endgame — nossa wiki da comunidade traz tudo o que você precisa com guias gratuitos e atualizados.",
+      "primary": "Ler o Guia para Iniciantes",
+      "secondary": "Jogar no Roblox"
+    }
+  },
+  "bosses": {
+    "meta": {
+      "title": "Chefes — Guia Completo e Detalhado | My Seafood Stand Wiki",
+      "description": "Guias completos de chefes para My Seafood Stand — todos os chefes, desde o cavaleiro Gelum no tutorial até confrontos de endgame, com estratégias, drops e tempos de respawn."
+    },
+    "overviewTitle": "Visão Geral dos Chefes",
+    "overviewDescription": "Guias completos para todos os confrontos de chefes em My Seafood Stand — 13 chefes, desde o cavaleiro do tutorial Gelum até confrontos de endgame como Gelid Dweller e desafios de Gauntlet.",
+    "body": "Os chefes em My Seafood Stand servem como testes de habilidade e marcos de progressão. Alguns, como Gelum, ensinam os fundamentos do combate durante o tutorial. Outros, como o Espírito Shikai e o Espírito Resurrección, são encontros no mundo interior diretamente ligados ao desbloqueio de poder da sua raça. Chefes de área como Dragonfly, King Croc e Securis guardam o acesso a novas zonas e recompensas. As adições recentes incluem o Rogue Commander com seus Minions, o temático de gelo The Everfrosted e quatro novos chefes de endgame: The Gelid Dweller, Cinder of the Broken Sky, Devourer of Hosts e o Wandering Swordsman (Junichiro). Cada chefe possui padrões de ataque distintos e movimentos telegrafados que você precisa aprender. Use os guias abaixo para se preparar para cada luta.",
+    "guidesTitle": "Guias de Chefes",
+    "readMore": "Ler mais",
+    "new": "Novo",
+    "popular": "Popular"
+  },
+  "shared": {
+    "wikiNavigation": "Navegação da Wiki",
+    "activeCodes": "Códigos Ativos",
+    "updated": "Atualizado",
+    "viewAllCodes": "Ver todos os códigos",
+    "playOnRoblox": "Jogar no Roblox",
+    "inThisSection": "Nesta seção",
+    "tableOfContents": "Índice",
+    "nextSteps": "Próximos Passos",
+    "needHelp": "Precisa de Ajuda?",
+    "relatedReading": "Leituras Relacionadas",
+    "relatedGuides": "Guias Relacionados",
+    "readMore": "Ler mais",
+    "officialMedia": "Mídia oficial",
+    "home": "Início",
+    "noGuidesAvailable": "Nenhum guia disponível ainda. Volte em breve!"
+  },
+  "footer": {
+    "aboutTitle": "My Seafood Stand Wiki",
+    "about": "A My Seafood Stand Wiki é uma central de guias independente criada por fãs, cobrindo rotas de progressão, raças, chefes, builds e conhecimentos essenciais do jogo para novatos e veteranos.",
+    "quickLinks": "Links Rápidos",
+    "guides": "Guias",
+    "legal": "Legal",
+    "copyright": "2026 My Seafood Stand Wiki. Não afiliado à Midnight Continent ou ao Roblox.",
+    "description": "RPG de luta gratuito no Roblox inspirado em Bleach. 3 raças, mais de 130 habilidades, Nív. 100 máx.",
+    "playGame": "Jogar My Seafood Stand",
+    "officialDiscord": "Discord Oficial",
+    "officialYoutube": "YouTube Oficial",
+    "vvBuilder": "VV Builder (Planejador de Habilidades)",
+    "beginnerGuide": "Guia para Iniciantes",
+    "raceGuides": "Guias de Raças",
+    "bossGuides": "Guias de Chefes",
+    "buildGuide": "Guia de Builds",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço"
+  }
+}
