@@ -5,9 +5,9 @@ on:
 
 jobs:
   deploy:
-    # Never deploy from the public mirror (libin257/vvultimatum_cloudflare);
+    # Never deploy from the public mirror (EricColeGame/vvultimatum_cloudflare);
     # template copies under other owners deploy normally with their own secrets.
-    if: github.repository_owner != 'libin257'
+    if: github.repository_owner != 'EricColeGame'
     runs-on: ubuntu-latest
 
     steps:
