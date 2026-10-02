@@ -47,6 +47,39 @@ jobs:
           elif [ -f out/en.html ]; then cp -f out/en.html out/index.html
           else echo "en homepage export not found"; find out -maxdepth 2 -name '*.html' | head -20; exit 1; fi
 
+      - name: Inject analytics (GA/Clarity) into HTML
+        env:
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
+          NEXT_PUBLIC_MICROSOFT_CLARITY_ID: ${{ secrets.NEXT_PUBLIC_MICROSOFT_CLARITY_ID }}
+        run: |
+          python3 - <<'PYEOF'
+          import os, pathlib
+          ga = os.environ.get("NEXT_PUBLIC_GOOGLE_ANALYTICS_ID", "").strip()
+          cl = os.environ.get("NEXT_PUBLIC_MICROSOFT_CLARITY_ID", "").strip()
+          ga_s = ""
+          if ga:
+              ga_s = ('<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>'
+                      '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};'
+                      'gtag("js",new Date());gtag("config","%s");</script>') % (ga, ga)
+          cl_s = ""
+          if cl:
+              cl_s = ('<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};'
+                      't=l.getElementsByTagName(r)[0];y=l.createElement(a);y.async=1;y.src="https://www.clarity.ms/tag/"+i;'
+                      'y.referrerPolicy="unsafe-url";t.parentNode.insertBefore(y,t)})(window,document,"clarity","script","%s");</script>') % cl
+          n = 0
+          for f in pathlib.Path("out").rglob("*.html"):
+              html = f.read_text(encoding="utf-8")
+              add = ""
+              if ga_s and "googletagmanager.com/gtag" not in html:
+                  add += ga_s
+              if cl_s and "clarity.ms/tag" not in html:
+                  add += cl_s
+              if add and "</head>" in html:
+                  f.write_text(html.replace("</head>", add + "</head>", 1), encoding="utf-8")
+                  n += 1
+          print("analytics injected into", n, "html files")
+          PYEOF
+
       - name: Deploy to Cloudflare Workers
         run: npx wrangler@latest deploy
         env:
