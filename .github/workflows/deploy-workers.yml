@@ -69,6 +69,8 @@ jobs:
                       'y.referrerPolicy="unsafe-url";t.parentNode.insertBefore(y,t)})(window,document,"clarity","script","%s");</script>') % cl
           n = 0
           for f in pathlib.Path("out").rglob("*.html"):
+              if f.relative_to("out").parts[0] == "ads":
+                  continue
               html = f.read_text(encoding="utf-8")
               add = ""
               if ga_s and "googletagmanager.com/gtag" not in html:
